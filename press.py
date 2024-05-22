@@ -9,7 +9,7 @@ branch_name = "branch"
 commit_message = "This is the commit message for pull request"
 remote_name = ""
 global number
-number = 0
+number = 1
 
 
 # Create a new git branch

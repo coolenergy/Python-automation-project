@@ -9,7 +9,7 @@ branch_name = "branch"
 commit_message = "This is the commit message for pull request"
 remote_name = ""
 global number
-number = 1
+number = 2
 
 
 # Create a new git branch
@@ -38,10 +38,11 @@ def git_push(remote_name, branch_name):
 
 
 def click_screen1(number):
-    create_branch(f"{branch_name}{number}")
+    name = f"{branch_name}{number}"
+    create_branch(name)
     modify_file(file_path)
     git_commit(commit_message)
-    git_push(remote_name, branch_name)
+    git_push(remote_name, name)
     number += 1
 
 

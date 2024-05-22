@@ -35,3 +35,4 @@ console.log(80);
 console.log(12);
 console.log(96);
 console.log(66);
+console.log(34);

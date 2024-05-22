@@ -9,3 +9,4 @@ console.log(35);
 console.log(65);
 console.log(6);
 console.log(87);
+console.log(12);

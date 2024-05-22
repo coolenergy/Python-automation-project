@@ -71,3 +71,4 @@ console.log(14);
 console.log(23);
 console.log(100);
 console.log(24);
+console.log(47);

@@ -54,3 +54,4 @@ console.log(50);
 console.log(43);
 console.log(22);
 console.log(100);
+console.log(9);

@@ -80,3 +80,4 @@ console.log(50);
 console.log(36);
 console.log(69);
 console.log(8);
+console.log(96);

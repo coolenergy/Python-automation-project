@@ -7,9 +7,9 @@ import random
 file_path = "app.js"
 branch_name = "branch"
 commit_message = "This is the commit message for pull request"
-remote_name = ""
+remote_name = "origin"
 global number
-number = 2
+number = 3
 
 
 # Create a new git branch
@@ -34,7 +34,7 @@ def git_commit(commit_message):
 
 # Push the code
 def git_push(remote_name, branch_name):
-    return subprocess.check_output(["git", "push"])
+    return subprocess.check_output(["git", "push", remote_name, branch_name])
 
 
 def click_screen1(number):

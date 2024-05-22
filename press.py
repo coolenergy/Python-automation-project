@@ -6,11 +6,11 @@ import time
 
 # Replace these with your values
 file_path = "app.js"
-branch_name = "branchtesta"
+branch_name = "sharkbranch"
 commit_message = "This is the commit message for pull request"
 remote_name = "origin"
 global number
-number = 3
+number = 0
 
 
 # Create a new git branch
@@ -47,9 +47,10 @@ def click_screen1(number):
 
 
 def main():
-    for i in range(5):
+    for i in range(120):
         click_screen1(i)
         time.sleep(20)
+        print("---------------------------", i)
 
 
 main()

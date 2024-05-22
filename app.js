@@ -120,3 +120,4 @@ console.log(100);
 console.log(83);
 console.log(54);
 console.log(68);
+console.log(36);

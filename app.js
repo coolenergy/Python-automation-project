@@ -40,3 +40,4 @@ console.log(95);
 console.log(65);
 console.log(74);
 console.log(90);
+console.log(68);

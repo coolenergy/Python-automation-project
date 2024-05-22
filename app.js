@@ -109,3 +109,4 @@ console.log(8);
 console.log(74);
 console.log(62);
 console.log(16);
+console.log(48);

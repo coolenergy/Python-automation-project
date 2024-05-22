@@ -66,3 +66,4 @@ console.log(79);
 console.log(16);
 console.log(100);
 console.log(35);
+console.log(2);

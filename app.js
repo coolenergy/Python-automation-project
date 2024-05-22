@@ -122,3 +122,4 @@ console.log(54);
 console.log(68);
 console.log(36);
 console.log(29);
+console.log(45);

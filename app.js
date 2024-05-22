@@ -34,3 +34,4 @@ console.log(87);
 console.log(80);
 console.log(12);
 console.log(96);
+console.log(66);

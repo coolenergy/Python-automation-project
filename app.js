@@ -91,3 +91,4 @@ console.log(71);
 console.log(44);
 console.log(55);
 console.log(79);
+console.log(6);

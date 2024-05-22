@@ -17,3 +17,4 @@ console.log(13);
 console.log(31);
 console.log(33);
 console.log(59);
+console.log(95);

@@ -25,7 +25,7 @@ def git_commit(commit_message):
 
 
 # Push the code
-def git_push():
+def git_push(remote_name, branch_name):
     return subprocess.check_output(["git", "push"])
 
 
@@ -35,11 +35,6 @@ branch_name = "branch"
 commit_message = "This is the commit message for pull request"
 remote_name = ""
 number = 0
-
-create_branch(branch_name)
-modify_file(file_path)
-git_commit(commit_message)
-git_push(remote_name, branch_name)
 
 
 def click_screen1():

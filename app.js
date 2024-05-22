@@ -98,3 +98,4 @@ console.log(46);
 console.log(33);
 console.log(1);
 console.log(58);
+console.log(95);

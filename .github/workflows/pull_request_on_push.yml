@@ -1,18 +1,49 @@
-name: Create Pull Request
+# name: Create Pull Request
+# on: [push]
+# jobs:
+#   create_pull_request:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+#       - name: Create Pull Request
+#         uses: peter-evans/create-pull-request@v3
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           commit-message: Create PR
+#           title: "New changes"
+#           body: "New changes in this PR"
+#           branch: "branch-name"
+#           delete-branch: true
+#           draft: false
+
+name: Automate PR and Merge
 on: [push]
 jobs:
-  create_pull_request:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Create new branch and push
+        run: |
+          git checkout -b new-branch
+          git push origin new-branch
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Create PR
-          title: "New changes"
-          body: "New changes in this PR"
-          branch: "branch-name"
-          delete-branch: true
-          draft: false
+          title: "Automated PR"
+          body: "New changes"
+          branch: "new-branch"
+      - name: Merge Pull Request
+        uses: pascalgn/automerge-action@v0.13.0
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: ""
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "Automatic merge of PR"
+          MERGE_FORKS: "false"
+          UPDATE_LABELS: ""

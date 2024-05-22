@@ -2,10 +2,11 @@ import pyautogui
 import keyboard
 import subprocess
 import random
+import time
 
 # Replace these with your values
 file_path = "app.js"
-branch_name = "branch"
+branch_name = "branchtest"
 commit_message = "This is the commit message for pull request"
 remote_name = "origin"
 global number
@@ -43,11 +44,12 @@ def click_screen1(number):
     modify_file(file_path)
     git_commit(commit_message)
     git_push(remote_name, name)
-    number += 1
 
 
-# start listening for the hotkey
-keyboard.add_hotkey("ctrl+shift+2", click_screen1(number=number))
+def main():
+    for i in range(5):
+        click_screen1(i)
+        time.sleep(1.5)
 
-# this line is necessary to keep the script running
-keyboard.wait()
+
+main()

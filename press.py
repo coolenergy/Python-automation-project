@@ -6,7 +6,7 @@ import time
 
 # Replace these with your values
 file_path = "app.js"
-branch_name = "branchtest"
+branch_name = "branchtesta"
 commit_message = "This is the commit message for pull request"
 remote_name = "origin"
 global number
@@ -49,7 +49,7 @@ def click_screen1(number):
 def main():
     for i in range(5):
         click_screen1(i)
-        time.sleep(1.5)
+        time.sleep(20)
 
 
 main()

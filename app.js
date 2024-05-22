@@ -8,3 +8,4 @@ console.log(43);
 console.log(35);
 console.log(65);
 console.log(6);
+console.log(87);

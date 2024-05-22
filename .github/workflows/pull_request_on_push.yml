@@ -1,7 +1,7 @@
-name: Create and Auto-Merge Pull Request
+name: Create Pull Request
 on: [push]
 jobs:
-  create_and_merge_pull_request:
+  create_pull_request:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -16,14 +16,3 @@ jobs:
           branch: "branch-name"
           delete-branch: true
           draft: false
-      - name: Auto Merge Pull Request
-        uses: pascalgn/automerge-action@v0.14.2
-        env:
-          GITHUB_TOKEN: "${{ secrets.GH_PAT }}"
-          MERGE_LABELS: "automerge,!wip"
-          MERGE_METHOD: "squash"
-          MERGE_COMMIT_MESSAGE: "Automatic merge of PR"
-          MERGE_FORKS: "false"
-          MERGE_RETRIES: "6"
-          MERGE_RETRY_SLEEP: "10000"
-          UPDATE_LABELS: ""
